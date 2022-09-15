@@ -14,7 +14,8 @@ int main(void)
 	n3 = n3;
 
 	if ((n1 % 2) == 0)
-		sum += n1;
+	sum += n1;
+
 	}
 	printf("%ld\n", sum);
 	return (0);
