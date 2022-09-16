@@ -9,8 +9,10 @@ int _isupper(int c)
 {
 	int a = isupper(c);
 
-	if (a == 0)
-		return (a);
-	else
+	if ((c >= 'A') && (C <= 'z'))
+	{
 		return (1);
+	}
+
+	return (0);
 }
