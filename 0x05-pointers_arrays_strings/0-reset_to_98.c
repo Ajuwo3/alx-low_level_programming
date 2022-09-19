@@ -8,13 +8,16 @@
  */
        
 int main(void)
-void reset_to_98(int *n)
 {
 	int p;
 	int *n;
 
 	p = 402;
-	n = &p;
+	n = &p
+}
+
+void reset_to_98(int *n)
+{
 	*n = 98
 }
 
