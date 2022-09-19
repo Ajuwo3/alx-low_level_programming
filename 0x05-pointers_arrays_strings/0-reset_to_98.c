@@ -6,14 +6,14 @@
  * @n: parameter
  * Return: Always 0
  */
-
+void int(void)
 void reset_to_98(int *n)
 {
-	int n;
+	int p;
 	int *n;
 
-	n = 402;
-	n = &n;
+	p = 402;
+	n = &p;
 	*n = 98
 }
 
