@@ -6,7 +6,8 @@
  * @n: parameter
  * Return: Always 0
  */
-void int(void)
+       
+int main(void)
 void reset_to_98(int *n)
 {
 	int p;
