@@ -19,10 +19,14 @@ char *cap_string(char *a)
 	{
 		for (s = 0; s < 13; s++)
 		{
-			if ((*(a + (count + 1)) > 97) && (*(s + (count + 1)) <= 122))
-				*(a + (count + 1)) = *(s + (count + 1)) - 32;
-			break;
+			if (*(a + count) == alx[s])
+			{
+				if ((*(a + (count + 1)) >= 97) && (*(a + (count + 1)) <= 122))
+					*(a + (count + 1)) = *(a + (count + 1)) - 32;
+				break;
+			}
 		}
+		count++;
 	}
-	count++;
+	return (s);
 }
