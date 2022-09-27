@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - function that prints the sum of the two diagonals of
@@ -10,20 +11,19 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j, k;
+	int sum0, sum1 = 0, sum2 = 0;
 
-	int i = 0;
-	int j = 0;
-
-	for (k = 0; k < size; k++)
+	for (sum0 = 0; sum0 < size; sum0++)
 	{
-		i = i + a[k * size + k];
+		sum1 += a[sum0];
+		a += size;
 	}
+	a -= size;
 
-	for (k = size - 1; k >= 0; k--)
+	for (sum0 = 0; sum0 < size; sum++)
 	{
-		j += a[k * size + (size - k 1)];
+		sum2 += a[sum0];
+		a -= size;
 	}
-
-	printf("%d, %d\n", i, k);
+	printf("%d, %d\n", sum1, sum2);
 }
