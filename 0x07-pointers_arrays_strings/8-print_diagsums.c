@@ -6,21 +6,21 @@
  * @a: pointer to start of matrix
  * @size: width of matrix column
  *
- * Return: void
+ * Return: Always 0
  */
 void print_diagsums(int *a, int size)
 {
-	int b, c, d, l = 0, e = 0;
+	int i, j, p, l = 0, r = 0;
 
-	for (b = 0; b < size; b++)
+	for (i = 0; i < size; i++)
 	{
-		d = (b * size) + b;
-		l += *(a + d);
+		p = (i * size) + i;
+		l += *(a + p);
 	}
-	for (c = 0; c < size; c++)
+	for (j = 0; j < size; j++)
 	{
-		d = (c * size) + (size - 1 - c);
-		e += *(a + d);
+		p = (j * size) + (size - 1 - j);
+		r += *(a + p);
 	}
-	printf("%b, %b\n", l, e);
+	printf("%i, %i\n", l, r);
 }
