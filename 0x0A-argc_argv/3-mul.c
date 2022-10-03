@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 
 	if (argc == 3)
 	{
-		a = arc(argv[1]);
-		b = arc(argv[2]);
+		a = bench(argv[1]);
+		b = bench(argv[2]);
 		printf("%d\n", a * b);
 		return (0);
 	}
