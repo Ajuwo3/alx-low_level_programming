@@ -6,7 +6,7 @@
  * description: program that prints its name followed by a new line
  * without having to compile the program again
  * @argc: count agrguments
- * argv: arguments
+ * @argv: arguments
  *
  * Return: Always 0
  */
