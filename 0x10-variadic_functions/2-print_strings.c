@@ -9,29 +9,29 @@
  *
  * Return: Always 0
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list valist;
-	unsigned int i;
-	char *str;
+	unsigned int i = 0;
+	va_list arg_ptr;
+	char *s_arg;
 
-	va_start(valist, n);
-
-	for (i = 0; i < n; i++)
+	if (n == 0)
 	{
-		str = va_arg(valist, char *);
-
-		if (str)
-			printf("%s", str);
-		else
-			printf("(null)");
-
-		if (i < n - 1)
-			if (separator)
-				printf("%s", separator);
+		printf("\n");
+		return;
 	}
-
-	printf("\n")
-		va_end(valist);
+	va_start(arg_ptr, n);
+	while (i < n)
+	{
+		s_arg = va_arg(arg_ptr, char *);
+		if (i != 0 && separator != NULL)
+			printf("%s", separator);
+		if (s_arg != NULL)
+			printf("%s", s_arg);
+		else
+			printf("(nil)");
+		i++;
+	}
+	va_end(arg_ptr);
+	printf("\n");
 }
