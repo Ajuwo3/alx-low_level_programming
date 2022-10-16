@@ -1,4 +1,8 @@
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+
 /**
  * p_char - print a character
  * @arg: argument to print
@@ -38,7 +42,7 @@ void p_strings(va_list arg)
 	printf("%s", (s) ? s : "(nil)");
 }
 /**
- *  print_all - prints anything
+ * print_all - prints anything
  * @format: list of types per arguments passed
  * Return: nothing
  */
