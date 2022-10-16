@@ -61,14 +61,17 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(p_arg, format);
+
 	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
+
 		while (i < 4)
 		{
 			if (fp_get[i].c == format[j])
 			{
 				fun = fp_get[i].pf;
+
 				if (p != 0)
 					printf(", ");
 				fun(p_arg);
